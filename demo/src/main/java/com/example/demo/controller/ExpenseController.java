@@ -1,13 +1,8 @@
 package com.example.demo.controller;
-
-
 import com.example.demo.model.Expense;
 import com.example.demo.service.ExpenseService;
-
 import java.util.Map;
-
 import org.springframework.web.bind.annotation.*;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -56,7 +51,7 @@ public class ExpenseController {
                     case "date" -> expense.setDate(LocalDate.parse((String) value));
                 }
             });
-            return service.createExpense(expense); // save updated expense
+            return service.createExpense(expense); 
         }
         return null;
     }
